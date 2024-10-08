@@ -6,5 +6,5 @@ export async function routes(fastify: FastifyInstance) {
     async (request: FastifyRequest, reply: FastifyReply) => {
       return { message: "Deu certo" };
     }
-  );
-}
+  ); // Ivo começa o desenvolvimento pelo serviço //
+} // rotas -> controllers -> services ->  db //
