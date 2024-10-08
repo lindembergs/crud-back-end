@@ -1,3 +1,0 @@
-class CreateCustomerControllers {}
-
-export { CreateCustomerControllers };

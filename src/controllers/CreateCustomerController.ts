@@ -1,0 +1,3 @@
+class CreateCustomerController {}
+
+export { CreateCustomerController };
