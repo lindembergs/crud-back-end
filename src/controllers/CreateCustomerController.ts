@@ -1,10 +1,10 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { CreateCustomerServices } from "../services/CreateCustomerServices";
+import { CreateCustomerService } from "../services/CreateCustomerService";
 
 class CreateCustomerController {
   async handle(request: FastifyRequest, reply: FastifyReply) {
     //inicializo o serviço //
-    const customerService = new CreateCustomerServices();
+    const customerService = new CreateCustomerService();
 
     // chamo o serviço//
     const customer = customerService.execute();
