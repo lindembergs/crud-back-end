@@ -15,9 +15,9 @@ datasource db {
 
 model Customer{
   id String @id @default(auto()) @map("_id") @db.ObjectId
-  nome String
+  name String
   email String
-  status String
+  status Boolean
   created_at DateTime? @default(now())
   updated_at DateTime? @default(now())
 

@@ -1,3 +1,5 @@
+import prismaClient from "../prisma";
+
 interface CreateCustomerProps {
   name: string;
   email: string;
@@ -7,7 +9,14 @@ class CreateCustomerService {
     if (!name || !email) {
       throw new Error("Necessário preencher os campos");
     }
-    return { ok: true };
+    const customer = prismaClient.customer.create({
+      data: {
+        name,
+        email,
+        status: true,
+      },
+    });
+    return customer;
   }
 }
 
