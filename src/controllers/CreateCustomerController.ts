@@ -7,7 +7,7 @@ class CreateCustomerController {
     const customerService = new CreateCustomerService();
 
     // chamo o serviço//
-    const customer = customerService.execute();
+    const customer = await customerService.execute();
     // devolve para a api //
     reply.send(customer);
   }
