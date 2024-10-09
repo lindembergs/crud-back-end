@@ -4,7 +4,9 @@ interface CreateCustomerProps {
 }
 class CreateCustomerService {
   async execute({ name, email }: CreateCustomerProps) {
-    console.log("a rota está funcionando 🐱‍🏍");
+    if (!name || !email) {
+      throw new Error("Necessário preencher os campos");
+    }
     return { ok: true };
   }
 }
