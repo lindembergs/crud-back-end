@@ -1,5 +1,4 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import prismaClient from "../prisma";
 import { DeleteCustomerService } from "../services/DeleteCustomerService";
 
 class DeleteCustomerController {
