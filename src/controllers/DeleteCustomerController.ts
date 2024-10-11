@@ -1,9 +1,7 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import prismaClient from "../prisma";
 import { DeleteCustomerService } from "../services/DeleteCustomerService";
-interface DeleteCustomerProps {
-  id: string;
-}
+
 class DeleteCustomerController {
   async handle(request: FastifyRequest, reply: FastifyReply) {
     const { id } = request.query as { id: string };
