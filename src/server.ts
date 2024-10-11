@@ -2,6 +2,10 @@ import fastify from "fastify";
 import { routes } from "./routes/routes";
 
 const app = fastify({ logger: true });
+// meddleware
+app.setErrorHandler((error, request, reply) => {
+  reply.code(400).send({ message: error.message });
+});
 
 const start = async () => {
   try {
