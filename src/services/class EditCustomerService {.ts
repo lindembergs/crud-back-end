@@ -23,6 +23,7 @@ class EditCustomerService {
         email: email,
       },
     });
+    return updatedCustomer;
   }
 }
 
