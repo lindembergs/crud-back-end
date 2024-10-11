@@ -1,8 +1,6 @@
 import prismaClient from "../prisma";
+import { DeleteCustomerProps } from "../types";
 
-interface DeleteCustomerProps {
-  id: string;
-}
 class DeleteCustomerService {
   async execute({ id }: DeleteCustomerProps) {
     if (!id) {
