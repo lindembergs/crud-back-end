@@ -2,6 +2,7 @@ import { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
 import { CreateCustomerController } from "../controllers/CreateCustomerController";
 import { ListCustomerController } from "../controllers/ListCustomerController";
 import { DeleteCustomerController } from "../controllers/DeleteCustomerController";
+import { EditCustomerController } from "../controllers/EditCustomerController";
 
 export async function routes(fastify: FastifyInstance) {
   fastify.get(
@@ -28,6 +29,9 @@ export async function routes(fastify: FastifyInstance) {
       return new DeleteCustomerController().handle(request, reply);
     }
   );
+  fastify.put("/customer/:id", async (request, reply) => {
+    return new EditCustomerController().handle(request, reply);
+  });
 }
 // Ivo começa o desenvolvimento pelo serviço //
 // rotas -> controllers -> services ->  db //
