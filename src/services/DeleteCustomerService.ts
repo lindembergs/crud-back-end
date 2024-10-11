@@ -22,6 +22,7 @@ class DeleteCustomerService {
         id: findCustomer.id,
       },
     });
+    return { message: "Usuário deletado com sucesso" };
   }
 }
 
