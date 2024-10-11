@@ -31,3 +31,4 @@ export async function routes(fastify: FastifyInstance) {
 }
 // Ivo começa o desenvolvimento pelo serviço //
 // rotas -> controllers -> services ->  db //
+// CRUD -> CREATE(post) / READ(get) / UPDATE(put) DELETE(delete)

@@ -5,3 +5,8 @@ export interface CreateCustomerProps {
 export interface DeleteCustomerProps {
   id: string;
 }
+export interface EditCustomerProps {
+  id: string;
+  name: string;
+  email: string;
+}
