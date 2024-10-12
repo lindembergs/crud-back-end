@@ -5,12 +5,6 @@ import { DeleteCustomerController } from "../controllers/DeleteCustomerControlle
 import { EditCustomerController } from "../controllers/EditCustomerController";
 
 export async function routes(fastify: FastifyInstance) {
-  fastify.get(
-    "/teste",
-    async (request: FastifyRequest, reply: FastifyReply) => {
-      return { message: "Deu certo" };
-    }
-  );
   fastify.post(
     "/customer",
     async (request: FastifyRequest, reply: FastifyReply) => {
