@@ -17,9 +17,9 @@ model Customer{
   id String @id @default(auto()) @map("_id") @db.ObjectId
   name String
   email String
-  image String
-  linkedin String
-  position String
+  image String?
+  linkedin String?
+  position String?
   created_at DateTime? @default(now())
   updated_at DateTime? @default(now())
 
