@@ -2,7 +2,7 @@ import prismaClient from "../prisma";
 import { CreateCustomerProps } from "../types/index";
 class CreateCustomerService {
   async execute({ name, image, linkedin, position }: CreateCustomerProps) {
-    if (!name) {
+    if (!name || !image || !linkedin || !position) {
       throw new Error("Necessário preencher os campos");
     }
     const customer = prismaClient.customer.create({
