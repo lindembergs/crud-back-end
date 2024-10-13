@@ -4,7 +4,7 @@ import { CreateCustomerProps } from "../types";
 
 class CreateCustomerController {
   async handle(request: FastifyRequest, reply: FastifyReply) {
-    const { name, email, image, linkedin, position } =
+    const { name, image, linkedin, position } =
       request.body as CreateCustomerProps;
     //inicializo o serviço //
     const customerService = new CreateCustomerService();
@@ -12,7 +12,6 @@ class CreateCustomerController {
     // chamo o serviço//
     const customer = await customerService.execute({
       name,
-      email,
       image,
       linkedin,
       position,
