@@ -2,7 +2,7 @@ import prismaClient from "../prisma";
 import { EditCustomerProps } from "../types";
 
 class EditCustomerService {
-  async execute({ id, name }: EditCustomerProps) {
+  async execute({ id, name, image, linkedin, position }: EditCustomerProps) {
     if (!id) {
       throw new Error("Solicitação inválida");
     }
@@ -19,7 +19,10 @@ class EditCustomerService {
         id: findCustomer.id,
       },
       data: {
-        name: name,
+        name: name ?? findCustomer.image,
+        image: image ?? findCustomer.image,
+        linkedin: linkedin ?? findCustomer.linkedin,
+        position: position ?? findCustomer.position,
       },
     });
     return updatedCustomer;
