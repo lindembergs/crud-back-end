@@ -19,6 +19,7 @@ class EditCustomerService {
         id: findCustomer.id,
       },
       data: {
+        // caso eu não passe a validação ?? e o valor não for passado no momento da edição, o atributo ficará vazio e será excluído o valor anterior.
         name: name ?? findCustomer.image,
         image: image ?? findCustomer.image,
         linkedin: linkedin ?? findCustomer.linkedin,
