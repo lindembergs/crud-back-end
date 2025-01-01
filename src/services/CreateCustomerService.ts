@@ -20,9 +20,7 @@ class CreateCustomerService {
       return customer;
     } catch (error) {
       console.error("Erro ao criar o usuário:", error);
-      throw new Error(
-        "Erro ao criar o usuário. Por favor, tente novamente 2025."
-      );
+      throw new Error("Erro ao criar o usuário. Por favor, tente novamente.");
     }
   }
 }
